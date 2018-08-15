@@ -1,0 +1,15 @@
+package $packagename;
+
+
+import $basepackagename.base.BaseBean;
+/**
+ * @author $author
+ * @Package $packagename
+ * @Description: $description
+ * @date $date
+ */
+public class $classNameBean extends BaseBean {
+
+
+
+}

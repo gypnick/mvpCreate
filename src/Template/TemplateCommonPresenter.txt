@@ -1,0 +1,40 @@
+package $packagename;
+
+
+
+
+import android.content.Context;
+
+import $basepackagename.base.CommonRecyclerViewContract;
+import $basepackagename.base.CommonRecyclerViewPresenter;
+import $basepackagename.mvp.m.$moduleName.$classNameBean;
+import java.lang.reflect.Type;
+import com.lzy.okgo.model.HttpParams;
+import $basepackagename.base.ResponseBean;
+import $basepackagename.base.CommonRecyclerViewContract;
+import java.util.List;
+import com.google.gson.reflect.TypeToken;
+/**
+ * @author $author
+ * @Package $packagename
+ * @Description: $description
+ * @date $date
+ */
+public class $namePresenter extends CommonRecyclerViewPresenter<$classNameBean> {
+
+    public $namePresenter(CommonRecyclerViewContract.View view, Context context, String listUrl) {
+        super(view, context, listUrl);
+    }
+
+    @Override
+    protected Type getBeanType() {
+        return new TypeToken<ResponseBean<List<$classNameBean>>>() {
+        }.getType();
+    }
+
+    @Override
+    protected HttpParams otherHttpParams(int page) {
+        HttpParams httpParams = getHttpParams();
+        return httpParams;
+    }
+}

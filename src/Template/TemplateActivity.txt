@@ -1,0 +1,43 @@
+package $packagename;
+
+import android.databinding.DataBindingUtil;
+import $basepackagename.base.BaseActivity;
+import $basepackagename.R;
+import $basepackagename.databinding.Activity$classNameBinding;
+import $basepackagename.mvp.c.$moduleName.$nameContract;
+import $basepackagename.mvp.p.$moduleName.$namePresenter;
+import $basepackagename.mvp.m.$moduleName.$classNameBean;
+import com.lzy.okgo.model.HttpParams;
+
+/**
+ * @author $author
+ * @Package $packagename
+ * @Description: $description
+ * @date $date
+ */
+public class $name extends BaseActivity<$nameContract.View, $namePresenter> implements $nameContract.View{
+     private Activity$classNameBinding binding;
+    @Override
+    protected $namePresenter createPresenter() {
+        return new $namePresenter(this,this);
+    }
+    @Override
+    protected void initDataBinding() {
+            binding = DataBindingUtil.setContentView(this, R.layout.$layoutname);
+            toolbar=binding.toolBar.toolbar;
+            back = binding.toolBar.back;
+            title_tv = binding.toolBar.title;
+    }
+
+     @Override
+     public void setData($classNameBean bean) {
+            binding.setBean(bean);
+     }
+
+     @Override
+     public void initData() {
+         super.initData();
+         HttpParams httpParams = new HttpParams();
+         mPresenter.getData(httpParams);
+     }
+}

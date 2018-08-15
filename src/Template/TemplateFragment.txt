@@ -1,0 +1,46 @@
+package $packagename;
+
+import android.os.Bundle;
+import android.view.View;
+import $basepackagename.R;
+import $basepackagename.base.BaseFragment;
+import $basepackagename.databinding.Fragment$classNameBinding;
+import $basepackagename.mvp.c.$moduleName.$nameContract;
+import $basepackagename.mvp.p.$moduleName.$namePresenter;
+import android.databinding.DataBindingUtil;
+import android.support.annotation.Nullable;
+import android.view.LayoutInflater;
+import com.lzy.okgo.model.HttpParams;
+import android.view.ViewGroup;
+import $basepackagename.mvp.m.$moduleName.$classNameBean;
+/**
+ * @author $author
+ * @Package $packagename
+ * @Description: $description
+ * @date $date
+ */
+public class $name extends BaseFragment<$nameContract.View, $namePresenter> implements $nameContract.View{
+     private Fragment$classNameBinding binding;
+     @Override
+     protected $namePresenter createPresenter() {
+         return new $namePresenter(this,getActivity());
+     }
+
+
+     @Override
+     protected View initDataBindingViewId(LayoutInflater inflater, @Nullable ViewGroup container) {
+        binding = DataBindingUtil.inflate(inflater, R.layout.$layoutname, container, false);
+        return binding.getRoot();
+     }
+
+      @Override
+      public void setData($classNameBean bean) {
+            binding.setBean(bean);
+      }
+   @Override
+     public void initData() {
+         super.initData();
+         HttpParams httpParams = new HttpParams();
+         mPresenter.getData(httpParams);
+     }
+}

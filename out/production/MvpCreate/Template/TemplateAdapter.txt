@@ -1,0 +1,30 @@
+package $basepackagename.mvp.adapter;
+
+
+
+import android.support.annotation.Nullable;
+
+import com.chad.library.adapter.base.BaseQuickAdapter;
+import com.chad.library.adapter.base.BaseViewHolder;
+import $basepackagename.mvp.m.$moduleName.$classNameBean;
+
+import java.util.List;
+
+/**
+ * @author $author
+ * @Package $packagename
+ * @Description: $description
+ * @date $date
+ */
+public class $classNameAdapter extends BaseQuickAdapter<$classNameBean, BaseViewHolder> {
+
+
+    public $classNameAdapter(int layoutResId, @Nullable List<$classNameBean> data) {
+        super(layoutResId, data);
+    }
+
+    @Override
+    protected void convert(BaseViewHolder helper, $classNameBean item) {
+
+    }
+}

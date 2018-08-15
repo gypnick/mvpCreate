@@ -1,0 +1,52 @@
+package $packagename;
+
+import android.os.Bundle;
+import android.view.View;
+
+import android.content.Intent;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.view.ViewGroup;
+import $basepackagename.R;
+import $basepackagename.mvp.adapter.$classNameAdapter;
+import $basepackagename.base.CommonRecyclerViewFragment;
+import $basepackagename.mvp.m.$moduleName.$classNameBean;
+import $basepackagename.mvp.p.$moduleName.$namePresenter;
+
+/**
+ * @author $author
+ * @Package $packagename
+ * @Description: $description
+ * @date $date
+ */
+public class $name extends CommonRecyclerViewFragment<$classNameBean,$classNameAdapter,$namePresenter> {
+    @Override
+    public void itemClick(int position) {
+
+    }
+
+    @Override
+    public $namePresenter getPresenter() {
+        return new $namePresenter(this,getActivity(), "");
+    }
+
+    @Override
+    protected RecyclerView.LayoutManager setLayoutManager() {
+        return new LinearLayoutManager(getActivity());
+    }
+
+    @Override
+    protected $classNameAdapter setAdapter() {
+        return new $classNameAdapter(R.layout.$itemLayout,data);
+    }
+
+    @Override
+    protected boolean canLoadMore() {
+        return true;
+    }
+
+    @Override
+    protected String setAdapterHeadViewUrl() {
+        return null;
+    }
+}

@@ -1,0 +1,23 @@
+package $packagename;
+
+import $basepackagename.base.BasePresenter;
+import $basepackagename.base.BaseView;
+import $basepackagename.mvp.m.$moduleName.$classNameBean;
+import com.lzy.okgo.model.HttpParams;
+/**
+ * @author $author
+ * @Package $packagename
+ * @Description: $description
+ * @date $date
+ */
+public interface $nameContract {
+
+     interface Presenter {
+           void getData(HttpParams httpParams);
+    }
+
+     interface View extends BaseView {
+           void setData($classNameBean bean);
+    }
+
+}

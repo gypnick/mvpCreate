@@ -130,8 +130,8 @@ public class MvpCreateAction extends AnAction {
 
         fileName = "TemplateItemXml.txt";
         content = ReadTemplateFile(fileName);
-//        content = dealTemplateContent(content, "");
-        writeToFile(content, appPath, "item_" + camelToUnderline(mClassName).toLowerCase() + ".xml");
+        content = dealTemplateContent(content, "");
+        writeToFile(content, appPath, "item" + camelToUnderline(mClassName).toLowerCase() + ".xml");
 
     }
 

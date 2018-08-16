@@ -13,7 +13,7 @@ import com.lzy.okgo.model.HttpParams;
 import $basepackagename.base.ResponseBean;
 import $basepackagename.base.CommonRecyclerViewContract;
 import java.util.List;
-
+import com.google.gson.reflect.TypeToken;
 /**
  * @author $author
  * @Package $packagename

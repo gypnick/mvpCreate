@@ -7,7 +7,7 @@ import $basepackagename.mvp.c.$moduleName.$nameContract;
 import com.lzy.okgo.model.HttpParams;
 import $basepackagename.mvp.m.$moduleName.$classNameBean;
 import java.lang.reflect.Type;
-
+import com.google.gson.reflect.TypeToken;
 
 /**
  * @author $author
